@@ -1,23 +1,21 @@
-/*
- * File: 4-print_rev.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**
- * print_rev - Prints a string in reverse.
- * @s: The string to be printed.
- */
+*print_rev - function to print the sentence in  reverse
+*@s: The character to print
+* Return: nothing.
+*/
+
 void print_rev(char *s)
 {
-	int len = 0, index;
+	int i = 0, l;
 
-	while (s[index++])
-		len++;
+	while (s[i] != '\0')
+		i++;
 
-	for (index = len - 1; index >= 0; index--)
-		_putchar(s[index]);
-
+	for (l = i - 1; l >= 0; l--)
+	{
+		_putchar(*(s + l));
+	}
 	_putchar('\n');
 }
